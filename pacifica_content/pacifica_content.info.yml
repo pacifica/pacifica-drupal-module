@@ -1,0 +1,8 @@
+name: Pacifica Content Types
+description: 'Creates Pacifica compatible content types.'
+type: module
+package: Pacifica
+version: VERSION
+core: 8.x
+dependencies:
+- drupal:system (>=8.5)

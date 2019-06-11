@@ -1,5 +1,5 @@
 {
-    "name": "drupal/pacifica_content",
+    "name": "drupal/pacifica-content",
     "description": "Pacifica content types for metadata.",
     "license": "LGPL-3.0",
     "type": "drupal-module",

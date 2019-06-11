@@ -1,0 +1,12 @@
+{
+    "name": "drupal/pacifica_content",
+    "description": "Pacifica content types for metadata.",
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "David Brown",
+            "email": "dmlb2000@gmail.com"
+        }
+    ],
+    "require": {}
+}

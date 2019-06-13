@@ -1,5 +1,5 @@
-name: Pacifica API
-description: 'Creates interfaces to Pacifica APIs.'
+name: Pacifica
+description: 'Common Pacifica base module.'
 type: module
 package: Pacifica
 version: VERSION

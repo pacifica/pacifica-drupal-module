@@ -1,0 +1,5 @@
+---
+name: Organization
+type: organization
+description: 'Organization defined as an effort by some group of People and Projects.'
+langcode: en

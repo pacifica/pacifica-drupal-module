@@ -1,0 +1,5 @@
+---
+name: Project
+type: project
+description: 'Project defined as an effort by some group of People.'
+langcode: en

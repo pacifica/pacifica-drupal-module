@@ -1,26 +1,26 @@
 <?php
 
-namespace Drupal\Tests\pacifica_search\Functional;
+namespace Drupal\Tests\pacifica\Functional;
 
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * Tests behavior for saving the pacifica search field elements.
+ * Tests behavior for saving the pacifica field elements.
  *
- * @group pacifica_search
+ * @group pacifica
  */
-class PacificaSearchTest extends BrowserTestBase {
+class PacificaTest extends BrowserTestBase {
   /**
    * Modules to enable.
    *
    * @var array
    */
-  public static $modules = ['pacifica_search', 'node'];
+  public static $modules = ['pacifica', 'node'];
 
   /**
     * Basic test setup.
     */
-  public function testPacificaSearchSave() {
+  public function testPacificaSave() {
     $storage = \Drupal::entityTypeManager()->getStorage('node');
     // Save a node programatically.
     $node = $storage->create([

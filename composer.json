@@ -3,11 +3,22 @@
     "description": "Pacifica modules for Drupal.",
     "license": "LGPL-3.0",
     "type": "drupal-module",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "David Brown",
             "email": "dmlb2000@gmail.com"
         }
     ],
-    "require": {}
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "require": {
+        "drupal/bigint": "1.x-dev",
+        "drupal/json_field": "^1.0@RC"
+    }
 }

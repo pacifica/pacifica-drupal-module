@@ -1,0 +1,13 @@
+name: 'Data Upload'
+description: 'Provides Data Upload content type and related configuration. Pacifica data upload containing all the information about files and metadata.'
+type: module
+core: 8.x
+dependencies:
+  - bigint
+  - field
+  - json_field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user

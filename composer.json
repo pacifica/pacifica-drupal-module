@@ -24,6 +24,7 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/token": "^1.7",
         "drupal/search_api_solr": "^3.9",
-        "drupal/facets": "^1.4"
+        "drupal/facets": "^1.4",
+        "symfony/event-dispatcher": "4.3.11 as 3.4.35"
     }
 }

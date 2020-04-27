@@ -1,0 +1,7 @@
+name: JSONAPI
+description: 'Pacifica JSONAPI Settings'
+type: module
+core: 8.x
+dependencies:
+  - jsonapi
+package: Pacifica

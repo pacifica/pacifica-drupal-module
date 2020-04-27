@@ -5,4 +5,7 @@ package: Pacifica
 version: VERSION
 core: 8.x
 dependencies:
-- drupal:system (>=8.5)
+  - drupal:system (>=8.5)
+  - pacifica_data_upload
+  - pacifica_jsonapi
+

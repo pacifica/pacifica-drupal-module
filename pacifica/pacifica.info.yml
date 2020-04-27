@@ -6,6 +6,7 @@ version: VERSION
 core: 8.x
 dependencies:
   - drupal:system (>=8.5)
+  - pacifica_base_content
   - pacifica_data_upload
   - pacifica_jsonapi
 

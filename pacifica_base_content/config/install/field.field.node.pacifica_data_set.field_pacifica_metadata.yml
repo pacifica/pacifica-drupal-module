@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pacifica_metadata
+    - node.type.pacifica_data_set
+  module:
+    - json_field
+id: node.pacifica_data_set.field_pacifica_metadata
+field_name: field_pacifica_metadata
+entity_type: node
+bundle: pacifica_data_set
+label: Metadata
+description: 'Pacifica metadata field used to store metadata about an entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: json

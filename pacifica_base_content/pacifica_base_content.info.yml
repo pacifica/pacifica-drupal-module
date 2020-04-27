@@ -1,0 +1,22 @@
+name: 'Pacifica Base Content'
+description: 'Pacifica base content types.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - facets
+  - field
+  - json_field
+  - menu_ui
+  - name
+  - node
+  - path
+  - search_api
+  - search_api_solr
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+package: Pacifica
+core_incompatible: false

@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pacifica_data_set.body
+    - field.field.node.pacifica_data_set.field_pacifica_category
+    - field.field.node.pacifica_data_set.field_pacifica_data_set_type
+    - field.field.node.pacifica_data_set.field_pacifica_metadata
+    - field.field.node.pacifica_data_set.field_tags
+    - node.type.pacifica_data_set
+  module:
+    - text
+    - user
+id: node.pacifica_data_set.teaser
+targetEntityType: node
+bundle: pacifica_data_set
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_pacifica_category: true
+  field_pacifica_data_set_type: true
+  field_pacifica_metadata: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

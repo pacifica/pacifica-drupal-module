@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pacifica_person.body
+    - field.field.node.pacifica_person.field_pacifica_category
+    - field.field.node.pacifica_person.field_pacifica_metadata
+    - field.field.node.pacifica_person.field_pacifica_name
+    - field.field.node.pacifica_person.field_pacifica_person_type
+    - field.field.node.pacifica_person.field_tags
+    - node.type.pacifica_person
+  module:
+    - text
+    - user
+id: node.pacifica_person.teaser
+targetEntityType: node
+bundle: pacifica_person
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_pacifica_category: true
+  field_pacifica_metadata: true
+  field_pacifica_name: true
+  field_pacifica_person_type: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

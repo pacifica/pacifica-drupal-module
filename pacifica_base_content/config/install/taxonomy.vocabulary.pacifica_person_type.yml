@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Type'
+vid: pacifica_person_type
+description: 'Pacifica Person Type'
+weight: 0

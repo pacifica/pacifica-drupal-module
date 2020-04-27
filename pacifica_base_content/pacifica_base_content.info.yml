@@ -4,13 +4,16 @@ type: module
 core: 8.x
 dependencies:
   - block
+  - comment
   - facets
   - field
+  - image
   - json_field
   - menu_ui
   - name
   - node
   - path
+  - rdf
   - search_api
   - search_api_solr
   - system

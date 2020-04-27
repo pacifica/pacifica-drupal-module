@@ -1,2 +1,15 @@
 bundle: pacifica
+excluded:
+  - field.field.node.article.field_tags
+  - rdf.mapping.taxonomy_term.tags
+  - block.block.category
+  - block.block.datasettype
+  - block.block.datasourcetype
+  - block.block.persontype
+  - block.block.seven_category
+  - block.block.seven_datasettype
+  - block.block.seven_datasourcetype
+  - block.block.seven_persontype
+  - block.block.seven_tags
+  - block.block.tags
 required: true

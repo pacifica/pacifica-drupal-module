@@ -1,5 +1,5 @@
 status: 2
-pattern: '[node:field_pacifica_name:family], [node:field_pacifica_name:given] [node:field_pacifica_name:middle]'
+pattern: '[node:field_pacifica_name:0:family], [node:field_pacifica_name:0:given] [node:field_pacifica_name:0:middle]'
 escape: true
 dependencies:
   config:

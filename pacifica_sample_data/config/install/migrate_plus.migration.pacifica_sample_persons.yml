@@ -6,14 +6,14 @@ migration_tags:
 source:
   plugin: embedded_data
   data_rows:
-    - id: 1
+    - id: 10
       family: Doe
       middle: Patrick
       given: John
       body: This is John Doe's short biography about the data he produces.
       metadata: {}
   ids:
-    term_id:
+    id:
       type: integer
 destination:
   plugin: entity:node

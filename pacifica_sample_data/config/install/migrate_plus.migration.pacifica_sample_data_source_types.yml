@@ -6,13 +6,13 @@ migration_tags:
 source:
   plugin: embedded_data
   data_rows:
-    - term_id: 1
+    - term_id: 12
       name: Instrument
-    - term_id: 2
+    - term_id: 13
       name: Computational
-    - term_id: 3
+    - term_id: 14
       name: Natural
-    - term_id: 4
+    - term_id: 15
       name: Operational
   ids:
     term_id:

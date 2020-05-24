@@ -6,15 +6,15 @@ migration_tags:
 source:
   plugin: embedded_data
   data_rows:
-    - term_id: 1
+    - term_id: 7
       name: Raw
-    - term_id: 2
+    - term_id: 8
       name: Analytical
-    - term_id: 3
+    - term_id: 9
       name: Synthetic
-    - term_id: 4
+    - term_id: 10
       name: Model
-    - term_id: 5
+    - term_id: 11
       name: Observational
   ids:
     term_id:

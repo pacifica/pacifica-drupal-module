@@ -7,11 +7,17 @@ source:
   plugin: embedded_data
   data_rows:
     - id: 10
+      title: Doe, John Patrick
       family: Doe
       middle: Patrick
       given: John
       body: This is John Doe's short biography about the data he produces.
       metadata: {}
+      categories:
+        - id: 1
+        - id: 3
+      person_types:
+        - id: 17
   ids:
     id:
       type: integer
@@ -23,5 +29,22 @@ process:
   field_pacifica_name/family: family
   field_pacifica_name/middle: middle
   field_pacifica_name/given: given
+  title: title
   body: body
   field_pacifica_metadata: metadata
+  field_pacifica_category:
+    - plugin: sub_process
+      source: categories
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_categories
+          source: id
+  field_pacifica_person_type:
+    - plugin: sub_process
+      source: person_types
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_person_types
+          source: id

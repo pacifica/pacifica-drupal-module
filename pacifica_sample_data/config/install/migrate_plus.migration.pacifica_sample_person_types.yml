@@ -6,15 +6,15 @@ migration_tags:
 source:
   plugin: embedded_data
   data_rows:
-    - term_id: 1
+    - term_id: 16
       name: Researcher
-    - term_id: 2
+    - term_id: 17
       name: Technician
-    - term_id: 3
+    - term_id: 18
       name: Communicator
-    - term_id: 4
+    - term_id: 19
       name: Leadership
-    - term_id: 5
+    - term_id: 20
       name: Analyst
   ids:
     term_id:

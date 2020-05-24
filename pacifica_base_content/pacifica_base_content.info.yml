@@ -3,6 +3,7 @@ description: 'Pacifica base content types.'
 type: module
 core: 8.x
 dependencies:
+  - auto_entitylabel
   - block
   - comment
   - facets

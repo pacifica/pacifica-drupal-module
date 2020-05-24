@@ -1,0 +1,25 @@
+id: pacifica_sample_data_source_types
+label: Sample data for data source taxonomy types
+migration_group: pacifica_sample_data
+migration_tags:
+  - example
+source:
+  plugin: embedded_data
+  data_rows:
+    - term_id: 1
+      name: Instrument
+    - term_id: 2
+      name: Computational
+    - term_id: 3
+      name: Natural
+    - term_id: 4
+      name: Operational
+  ids:
+    term_id:
+      type: integer
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: pacifica_data_source_type
+process:
+  tid: term_id
+  name: name

@@ -1,0 +1,27 @@
+id: pacifica_sample_person_types
+label: Sample data for person taxonomy types
+migration_group: pacifica_sample_data
+migration_tags:
+  - example
+source:
+  plugin: embedded_data
+  data_rows:
+    - term_id: 1
+      name: Researcher
+    - term_id: 2
+      name: Technician
+    - term_id: 3
+      name: Communicator
+    - term_id: 4
+      name: Leadership
+    - term_id: 5
+      name: Analyst
+  ids:
+    term_id:
+      type: integer
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: pacifica_person_type
+process:
+  tid: term_id
+  name: name

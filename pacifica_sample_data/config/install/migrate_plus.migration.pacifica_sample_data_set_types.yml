@@ -1,0 +1,27 @@
+id: pacifica_sample_data_set_types
+label: Sample data for data set taxonomy types
+migration_group: pacifica_sample_data
+migration_tags:
+  - example
+source:
+  plugin: embedded_data
+  data_rows:
+    - term_id: 1
+      name: Raw
+    - term_id: 2
+      name: Analytical
+    - term_id: 3
+      name: Synthetic
+    - term_id: 4
+      name: Model
+    - term_id: 5
+      name: Observational
+  ids:
+    term_id:
+      type: integer
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: pacifica_data_set_type
+process:
+  tid: term_id
+  name: name

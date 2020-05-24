@@ -1,0 +1,6 @@
+status: 2
+pattern: '[node:field_pacifica_name:family], [node:field_pacifica_name:given] [node:field_pacifica_name:middle]'
+escape: true
+dependencies:
+  config:
+    - node.type.pacifica_person

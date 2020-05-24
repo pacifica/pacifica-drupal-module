@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pacifica_sample_data
+label: 'Pacifica Sample Data'
+description: 'Migrate static representative data into Drupal.'
+source_type: JSON
+module: null
+shared_configuration: null

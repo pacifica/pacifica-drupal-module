@@ -1,0 +1,29 @@
+id: pacifica_sample_categories
+label: Sample data for category taxonomy
+migration_group: pacifica_sample_data
+migration_tags:
+  - example
+source:
+  plugin: embedded_data
+  data_rows:
+    - term_id: 1
+      name: Climate
+    - term_id: 2
+      name: Energy
+    - term_id: 3
+      name: National Security
+    - term_id: 4
+      name: Biology
+    - term_id: 5
+      name: Chemistry
+    - term_id: 6
+      name: Physics
+  ids:
+    term_id:
+      type: integer
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: pacifica_category
+process:
+  tid: term_id
+  name: name

@@ -1,0 +1,83 @@
+id: pacifica_sample_data_sets
+label: Sample data for data sets
+migration_group: pacifica_sample_data
+migration_tags:
+  - example
+source:
+  plugin: embedded_data
+  data_rows:
+    - id: 22
+      title: Saccharomyces Genome Database
+      body: |
+        The SGD provides Internet access to the complete Saccharomyces
+        cerevisiae genomic DNA sequence, its genes and their products, the
+        phenotypes of its mutants, and the literature supporting these data. In
+        the peer-reviewed literature report, experiment result on function and
+        interaction of yeast genes are extracted by high-quality manual
+        curation and integrated within a well-developed database. The data are
+        combined with quality high-throughput results and post on Locus Summary
+        pages which is a powerful query engine and rich genome browser. Based
+        on the complexity of information collection, multiple bioinformatic
+        tools are used to integrate information and allow productive discovery
+        of new biological details.[2] The gold standard for functional
+        description of budding yeast is provided by SGD resource. The SGD
+        resource also provide a platform from which to investigate related
+        genes and pathways in higher organisms. The amount of information and
+        the number of features provided by SGD have increased greatly following
+        the release of the S. cerevisiae genomic sequence. SGD aids researchers
+        by providing not only basic information, but also tools such as
+        sequence similarity searching that lead to detailed information about
+        features of the genome and relationships between genes. SGD presents
+        information using a variety of user-friendly, dynamically created
+        graphical displays illustrating physical, genetic and sequence feature
+        maps. All of the data in SGD are freely accessible to researchers and
+        educators worldwide via web pages designed for optimal ease of use.
+      categories:
+        - id: 4
+      data_set_types:
+        - id: 7
+    - id: 23
+      title: External Web Firewall Data
+      body: |
+        Cisco ASA firewalls protect our external web space and recieve a lot of
+        traffic. This traffic has been anonymised, cleaned and made available
+        to the public for research purposes.
+      categories:
+        - id: 3
+      data_set_types:
+        - id: 11
+    - id: 24
+      title: Simulated Climate Model (Regional Southeast US)
+      body: |
+        This model data was focused on the regional data southeast United
+        States, extending east to west Africa coast. The time the
+      categories:
+        - id: 1
+      data_set_types:
+        - id: 10
+  ids:
+    id:
+      type: integer
+destination:
+  plugin: entity:node
+  default_bundle: pacifica_data_set
+process:
+  nid: id
+  title: title
+  body: body
+  field_pacifica_category:
+    - plugin: sub_process
+      source: categories
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_categories
+          source: id
+  field_pacifica_data_set_type:
+    - plugin: sub_process
+      source: data_set_types
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_data_set_types
+          source: id

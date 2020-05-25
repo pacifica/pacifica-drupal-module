@@ -18,6 +18,39 @@ source:
         - id: 3
       person_types:
         - id: 17
+    - id: 11
+      title: Smith, Lindsey Martha
+      family: Smith
+      middle: Martha
+      given: Lindsey
+      body: This is Lindsey Smith's short biography about the data he produces.
+      metadata: {}
+      categories:
+        - id: 5
+      person_types:
+        - id: 19
+    - id: 12
+      title: Brown, Robert James
+      family: Brown
+      middle: James
+      given: Robert
+      body: This is Robert Brown's short biography about the data he produces.
+      metadata: {}
+      categories:
+        - id: 6
+      person_types:
+        - id: 18
+    - id: 13
+      title: Anderson, Bethany Graham
+      family: Anderson
+      middle: Graham
+      given: Bethany
+      body: This is Beth Anderson's short biography about the data he produces.
+      metadata: {}
+      categories:
+        - id: 3
+      person_types:
+        - id: 20
   ids:
     id:
       type: integer

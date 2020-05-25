@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.pacifica_data_set.body
     - field.field.node.pacifica_data_set.field_pacifica_category
     - field.field.node.pacifica_data_set.field_pacifica_data_set_type
+    - field.field.node.pacifica_data_set.field_pacifica_files
     - field.field.node.pacifica_data_set.field_pacifica_metadata
     - field.field.node.pacifica_data_set.field_tags
     - node.type.pacifica_data_set
@@ -33,6 +34,7 @@ content:
 hidden:
   field_pacifica_category: true
   field_pacifica_data_set_type: true
+  field_pacifica_files: true
   field_pacifica_metadata: true
   field_tags: true
   langcode: true

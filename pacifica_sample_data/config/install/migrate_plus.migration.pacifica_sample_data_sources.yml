@@ -1,0 +1,92 @@
+id: pacifica_sample_data_sources
+label: Sample data for data sources
+migration_group: pacifica_sample_data
+migration_tags:
+  - example
+source:
+  plugin: embedded_data
+  data_rows:
+    - id: 20
+      title: NextSeq 2000
+      body: |
+        NextSeq 2000 is redesigned from the ground up to maximize future
+        proofing, offering sequencing power for high throughput applications.
+        Offering scalability for evolving needs and larger studies, it
+        supports a vast variety of applications, including:
+
+        Single-Cell Gene Expression
+        (100 cycles) 4k cells; 10k reads/cell
+          
+        Examine the transcriptomes of individual cells for a high-resolution
+        view of cell-to-cell variation. Explore the distinct biology of
+        individual cells in complex tissues and understand cellular
+        subpopulation responses to environmental cues. With P2 reagents,
+        analyze 10 samples in approximately 13 hours. Or step up to P3 reagents
+        to analyze 25 samples in approximately 19 hours.
+
+        Whole-Exome Sequencing
+        (200 cycles) 50× mean target coverage
+
+        Exome sequencing is a cost-effective approach when whole-genome
+        sequencing is not practical or necessary. Efficiently identify coding
+        variants across a broad range of applications, including population
+        genetics, genetic disease, and cancer studies. In about 21 hours you
+        can analyze 16 samples with P2 reagents – with P3, get 40 whole exomes
+        in about 33 hours.
+
+        Shotgun Metagenomics
+        (300 cycles) 50M reads/sample
+
+        Comprehensively sample all genes in all organisms present in a given
+        complex sample. Evaluate bacterial diversity and detect the abundance
+        of microbes in various environments or study unculturable
+        microorganisms that are otherwise difficult or impossible to analyze.
+        In approximately 29 hours you can have data from 8 samples using P2
+        reagents. Scale up to 20 samples in approximately 48 hours with P3
+        reagents.
+      metadata: {}
+      categories:
+        - id: 4
+      data_source_types:
+        - id: 12
+    - id: 21
+      title: External Web Network ASA 5585-X with SSP60
+      body: |
+        Cisco ASA firewalls protect networks of all shapes and sizes, with
+        consistent security across hybrid infrastructures — physical, virtual,
+        and cloud. These solutions combine the most deployed firewall in the
+        industry with a full complement of next-generation network security
+        services. They protect corporate networks while providing employees
+        with secure access to data — anytime, anywhere, using any device.
+      metadata: {}
+      categories:
+        - id: 3
+      data_source_types:
+        - id: 15
+  ids:
+    id:
+      type: integer
+destination:
+  plugin: entity:node
+  default_bundle: pacifica_data_source
+process:
+  nid: id
+  title: title
+  body: body
+  field_pacifica_metadata: metadata
+  field_pacifica_category:
+    - plugin: sub_process
+      source: categories
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_categories
+          source: id
+  field_pacifica_data_source_type:
+    - plugin: sub_process
+      source: data_source_types
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_data_source_types
+          source: id

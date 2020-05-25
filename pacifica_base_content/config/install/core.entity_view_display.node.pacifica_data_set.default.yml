@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.pacifica_data_set.body
     - field.field.node.pacifica_data_set.field_pacifica_category
     - field.field.node.pacifica_data_set.field_pacifica_data_set_type
+    - field.field.node.pacifica_data_set.field_pacifica_files
     - field.field.node.pacifica_data_set.field_pacifica_metadata
     - field.field.node.pacifica_data_set.field_tags
     - node.type.pacifica_data_set
@@ -39,6 +40,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_pacifica_files:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: json
     region: content
   field_pacifica_metadata:
     weight: 102

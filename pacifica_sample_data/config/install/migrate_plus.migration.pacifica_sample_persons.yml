@@ -18,6 +18,10 @@ source:
         - id: 3
       person_types:
         - id: 17
+      data_sources:
+        - id: 22
+      data_sets:
+        - id: 25
     - id: 11
       title: Smith, Lindsey Martha
       family: Smith
@@ -80,4 +84,20 @@ process:
         target_id:
           plugin: migration_lookup
           migration: pacifica_sample_person_types
+          source: id
+  field_pacifica_data_sources:
+    - plugin: sub_process
+      source: data_sources
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_data_sources
+          source: id
+  field_pacifica_data_sets:
+    - plugin: sub_process
+      source: data_sets
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: pacifica_sample_data_sets
           source: id

@@ -3,15 +3,18 @@ status: true
 dependencies:
   module:
     - search_api_solr
-    - taxonomy
     - node
+    - taxonomy
     - search_api
   config:
     - field.storage.node.body
     - field.storage.node.field_pacifica_category
+    - field.storage.node.field_pacifica_data_sets
     - field.storage.node.field_pacifica_data_set_type
+    - field.storage.node.field_pacifica_data_sources
     - field.storage.node.field_pacifica_data_source_type
     - field.storage.node.field_pacifica_metadata
+    - field.storage.node.field_pacifica_persons
     - field.storage.node.field_pacifica_person_type
     - field.storage.node.field_tags
     - search_api.server.pacifica_default_server
@@ -82,6 +85,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_pacifica_data_set_type
+  field_pacifica_data_sets:
+    label: 'Data Sets'
+    datasource_id: 'entity:node'
+    property_path: field_pacifica_data_sets
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_pacifica_data_sets
   field_pacifica_data_source_type:
     label: 'Data Source Type'
     datasource_id: 'entity:node'
@@ -90,6 +101,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_pacifica_data_source_type
+  field_pacifica_data_sources:
+    label: 'Data Sources'
+    datasource_id: 'entity:node'
+    property_path: field_pacifica_data_sources
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_pacifica_data_sources
   field_pacifica_metadata:
     label: Metadata
     datasource_id: 'entity:node'
@@ -106,6 +125,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_pacifica_person_type
+  field_pacifica_persons:
+    label: Persons
+    datasource_id: 'entity:node'
+    property_path: field_pacifica_persons
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_pacifica_persons
   field_tags:
     label: Tags
     datasource_id: 'entity:node'

@@ -63,6 +63,19 @@ source:
         - id: 3
       data_source_types:
         - id: 15
+    - id: 22
+      title: GISS GCM Model II
+      body: |
+        The Goddard Institute for Space Studies General Circulation Model II,
+        described fully by Hansen et al. (1983), is a three-dimensional global
+        climate model that numerically solves the physical conservation
+        equations for energy, mass, momentum and moisture as well as the
+        equation of state.
+      metadata: {}
+      categories:
+        - id: 1
+      data_source_types:
+        - id: 13
   ids:
     id:
       type: integer

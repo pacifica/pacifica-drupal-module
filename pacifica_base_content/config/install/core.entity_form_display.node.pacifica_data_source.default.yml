@@ -4,8 +4,10 @@ dependencies:
   config:
     - field.field.node.pacifica_data_source.body
     - field.field.node.pacifica_data_source.field_pacifica_category
+    - field.field.node.pacifica_data_source.field_pacifica_data_sets
     - field.field.node.pacifica_data_source.field_pacifica_data_source_type
     - field.field.node.pacifica_data_source.field_pacifica_metadata
+    - field.field.node.pacifica_data_source.field_pacifica_persons
     - field.field.node.pacifica_data_source.field_tags
     - node.type.pacifica_data_source
   module:
@@ -43,6 +45,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_pacifica_data_sets:
+    weight: 126
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_pacifica_data_source_type:
     weight: 125
     settings:
@@ -60,6 +72,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: json_textarea
+    region: content
+  field_pacifica_persons:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_tags:
     weight: 124

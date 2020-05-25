@@ -5,8 +5,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.pacifica_data_source.body
     - field.field.node.pacifica_data_source.field_pacifica_category
+    - field.field.node.pacifica_data_source.field_pacifica_data_sets
     - field.field.node.pacifica_data_source.field_pacifica_data_source_type
     - field.field.node.pacifica_data_source.field_pacifica_metadata
+    - field.field.node.pacifica_data_source.field_pacifica_persons
     - field.field.node.pacifica_data_source.field_tags
     - node.type.pacifica_data_source
   module:
@@ -32,8 +34,10 @@ content:
     region: content
 hidden:
   field_pacifica_category: true
+  field_pacifica_data_sets: true
   field_pacifica_data_source_type: true
   field_pacifica_metadata: true
+  field_pacifica_persons: true
   field_tags: true
   langcode: true
   search_api_excerpt: true

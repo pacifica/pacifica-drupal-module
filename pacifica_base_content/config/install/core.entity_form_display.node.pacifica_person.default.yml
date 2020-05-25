@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.field.node.pacifica_person.body
     - field.field.node.pacifica_person.field_pacifica_category
+    - field.field.node.pacifica_person.field_pacifica_data_sets
+    - field.field.node.pacifica_person.field_pacifica_data_sources
     - field.field.node.pacifica_person.field_pacifica_metadata
     - field.field.node.pacifica_person.field_pacifica_name
     - field.field.node.pacifica_person.field_pacifica_person_type
@@ -37,6 +39,26 @@ content:
     third_party_settings: {  }
   field_pacifica_category:
     weight: 126
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_pacifica_data_sets:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_pacifica_data_sources:
+    weight: 128
     settings:
       match_operator: CONTAINS
       match_limit: 10

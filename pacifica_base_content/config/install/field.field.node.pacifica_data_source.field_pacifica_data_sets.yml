@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pacifica_data_sets
+    - node.type.pacifica_data_set
+    - node.type.pacifica_data_source
+id: node.pacifica_data_source.field_pacifica_data_sets
+field_name: field_pacifica_data_sets
+entity_type: node
+bundle: pacifica_data_source
+label: 'Data Sets'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pacifica_data_set: pacifica_data_set
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

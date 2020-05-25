@@ -5,6 +5,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.pacifica_person.body
     - field.field.node.pacifica_person.field_pacifica_category
+    - field.field.node.pacifica_person.field_pacifica_data_sets
+    - field.field.node.pacifica_person.field_pacifica_data_sources
     - field.field.node.pacifica_person.field_pacifica_metadata
     - field.field.node.pacifica_person.field_pacifica_name
     - field.field.node.pacifica_person.field_pacifica_person_type
@@ -33,6 +35,8 @@ content:
     region: content
 hidden:
   field_pacifica_category: true
+  field_pacifica_data_sets: true
+  field_pacifica_data_sources: true
   field_pacifica_metadata: true
   field_pacifica_name: true
   field_pacifica_person_type: true

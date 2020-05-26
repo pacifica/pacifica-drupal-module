@@ -1,25 +1,23 @@
 language: php
 sudo: false
+dist: bionic
 
 matrix:
   fast_finish: true
   include:
-    - env: DRUPAL=8.6.x
-      php: 7.1
-    - env: DRUPAL=8.6.x
-      php: 7.2
-    - env: DRUPAL=8.6.x
+    - env: DRUPAL=8.6
       php: 7.3
-    - env: DRUPAL=8.7.x
-      php: 7.1
-    - env: DRUPAL=8.7.x
-      php: 7.2
-    - env: DRUPAL=8.7.x
+    - env: DRUPAL=8.7
+      php: 7.3
+    - env: DRUPAL=8.8
       php: 7.3
 
 addons:
   hosts:
     - example.com
+
+services:
+  - mysql
 
 cache:
   directories:
@@ -64,11 +62,10 @@ before_script:
   - cd ..
 
   # Download Drupal 8 core.
-  - travis_retry drush dl drupal-$DRUPAL --drupal-project-rename=drupal
+  - composer -n create-project drupal/recommended-project:^${DRUPAL}@dev drupal
   - cd drupal
-
-  # Update PHPUnit.
-  - composer run-script drupal-phpunit-upgrade
+  - composer update phpunit/phpunit symfony/phpunit-bridge phpspec/prophecy symfony/yaml --with-dependencies
+  - cd web
 
   # Make the module appear in the correct place
   - ln -s $TESTDIR modules/pacifica

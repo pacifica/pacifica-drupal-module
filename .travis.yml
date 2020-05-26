@@ -63,7 +63,9 @@ before_script:
 
   # Download Drupal 8 core.
   - composer -n create-project drupal/recommended-project:^${DRUPAL}@dev drupal
-  - cd drupal/web
+  - cd drupal
+  - composer update phpunit/phpunit symfony/phpunit-bridge phpspec/prophecy symfony/yaml --with-dependencies
+  - cd web
 
   # Make the module appear in the correct place
   - ln -s $TESTDIR modules/pacifica

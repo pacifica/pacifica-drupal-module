@@ -17,7 +17,7 @@ addons:
     - example.com
 
 services:
-  - mariadb
+  - mysql
 
 cache:
   directories:

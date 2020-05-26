@@ -5,11 +5,11 @@ dist: bionic
 matrix:
   fast_finish: true
   include:
-    - env: DRUPAL=8.6.x
+    - env: DRUPAL=8.6
       php: 7.3
-    - env: DRUPAL=8.7.x
+    - env: DRUPAL=8.7
       php: 7.3
-    - env: DRUPAL=8.8.x
+    - env: DRUPAL=8.8
       php: 7.3
 
 addons:
@@ -62,11 +62,8 @@ before_script:
   - cd ..
 
   # Download Drupal 8 core.
-  - travis_retry drush dl drupal-$DRUPAL --drupal-project-rename=drupal
+  - composer -n create-project drupal/recommended-project:^${DRUPAL}@dev drupal
   - cd drupal
-
-  # Update PHPUnit.
-  - composer run-script drupal-phpunit-upgrade
 
   # Make the module appear in the correct place
   - ln -s $TESTDIR modules/pacifica

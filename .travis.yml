@@ -63,7 +63,7 @@ before_script:
 
   # Download Drupal 8 core.
   - composer -n create-project drupal/recommended-project:^${DRUPAL}@dev drupal
-  - cd drupal
+  - cd drupal/web
 
   # Make the module appear in the correct place
   - ln -s $TESTDIR modules/pacifica

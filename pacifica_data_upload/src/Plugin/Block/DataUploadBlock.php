@@ -47,6 +47,7 @@ class DataUploadBlock extends BlockBase {
   public function build() {
     $config = $this->getConfiguration();
     return [
+      '#theme' => 'data_upload',
       '#data_upload_url' => $config['data_upload_url'],
     ];
   }

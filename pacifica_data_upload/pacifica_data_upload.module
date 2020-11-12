@@ -7,7 +7,6 @@ function pacifica_data_upload_theme() {
     return [
         'data_upload' => [
             'variables' => ['data_upload_url' => NULL],
-            'template' => 'block--data-upload',
         ]
     ];
 }
